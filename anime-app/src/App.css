@@ -1,0 +1,81 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin-top: 0;
+}
+
+.navbar-items {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-items button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navbar-items button:hover {
+  color: #4b4bff;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.navbar-logo img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.searchbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.searchbar input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #646cff;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.searchbar button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #646cff;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  left: 0;
+  width: 100%;
+  color: #646cff;
+}
+
