@@ -42,7 +42,23 @@
   height: 5rem;
 }
 
+.test-grid ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.test-grid li {
+    list-style: none;
+    background: none;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .searchbar {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,15 +74,50 @@
   width: 100%;
 }
 
-.searchbar button {
-  padding: 0.5rem 1rem;
-  border: none;
-  background: #646cff;
+.searchbar-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #646cff;
   border-radius: 0.25rem;
-  color: white;
-  font-size: 1rem;
-  font-weight: 700;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.searchbar-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.searchbar-dropdown li {
+  padding: 0.5rem 1rem;
   cursor: pointer;
+}
+
+.searchbar-dropdown button {
+  background-color: #f8f9fa; /* Light background color */
+  color: #4b4bff; /* Blue text color */
+  border: none; /* Remove default border */
+  padding: 0.5rem 1rem; /* Add padding */
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Make button take full width */
+  font-size: 1rem; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.searchbar-dropdown button:hover {
+  background-color: #e2e6ea; /* Slightly darker background on hover */
+}
+
+.searchbar-dropdown button:focus {
+  outline: none; /* Remove default focus outline */
+  background-color: #dae0e5; /* Different background color on focus */
 }
 
 .footer {

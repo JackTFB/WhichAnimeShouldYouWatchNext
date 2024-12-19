@@ -1,9 +1,9 @@
-import Home from "./ MainContent/Home.jsx";
-import Search from "./ MainContent/Search.jsx";
-import About from "./ MainContent/About.jsx";
-import Test from "./ MainContent/Test.jsx";
+import Home from "./MainContent/Home.jsx";
+import Search from "./MainContent/Search.jsx";
+import About from "./MainContent/About.jsx";
+import Test from "./MainContent/Test.jsx";
 
-export default function MainContent({ activeComponent}) {
+export default function MainContent({ activeComponent }) {
       return (
         <div>
             {activeComponent === 'home' && <Home />}
