@@ -1,5 +1,5 @@
 import {useEffect, useState, useRef} from "react";
-import searchQuery from "../../../api/searchQuery";
+import searchQuery from "../../../api/SearchQuery.js";
 
 // eslint-disable-next-line react/prop-types
 export default function SearchBar({ setQuery }) {
