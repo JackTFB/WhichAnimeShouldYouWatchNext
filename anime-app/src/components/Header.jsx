@@ -9,7 +9,6 @@ export default function Header({ setActiveComponent }) {
             <div className="navbar-items">
                 <button onClick={() => setActiveComponent('home')}>Home</button>
                 <button onClick={() => setActiveComponent('search')}>Search</button>
-                <button onClick={() => setActiveComponent('test')}>Test</button>
                 <button onClick={() => setActiveComponent('about')}>About</button>
 
             </div>
