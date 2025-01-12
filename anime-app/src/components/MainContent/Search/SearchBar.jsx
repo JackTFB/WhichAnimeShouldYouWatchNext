@@ -1,6 +1,7 @@
 import {useEffect, useState, useRef} from "react";
 import searchQuery from "../../../api/searchQuery";
 
+// eslint-disable-next-line react/prop-types
 export default function SearchBar({ setQuery }) {
 
     const [inputValue, setInputValue] = useState('');
