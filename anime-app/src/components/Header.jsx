@@ -5,7 +5,7 @@ export default function Header({ setActiveComponent }) {
     <header>
         <div className="navbar">
             <div className="navbar-logo">
-                <img src="../../public/watson.png" alt="Watson"/>
+                <img src="/watson.png" alt="Watson"/>
             </div>
             <div className="navbar-items">
                 <button onClick={() => setActiveComponent('home')}>Home</button>
