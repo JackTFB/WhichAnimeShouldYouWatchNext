@@ -11,7 +11,9 @@ export default function SearchResults({ query }) {
         async function fetchData() {
             try {
                 const data = await TagQuery(query.id);
+                console.log(data);
                 var fetchedShows = data.data.Page.media.map(media => ({
+                    siteUrl: media.siteUrl,
                     title: media.title.english ? media.title.english : media.title.romaji,
                     coverImage: media.coverImage.large ? media.coverImage.large : media.coverImage.medium
                 }));
@@ -27,13 +29,15 @@ export default function SearchResults({ query }) {
     return (
         <div>
             <p>You searched for: {query.title}</p>
-            <p>{query.id}</p>
             <div className="test-grid">
                 <ul>
                     {shows.map((item, index) => (
                         <li key={index}>
-                            <img src={item.coverImage} alt={item.title}/>
-                            <p>{item.title}</p>
+                            <a href={item.siteUrl} target="_blank">
+                                <img src={item.coverImage} alt={item.title}/>
+                                <p>{item.id}</p>
+                                <p>{item.title}</p>
+                            </a>
                         </li>
                     ))}
                 </ul>

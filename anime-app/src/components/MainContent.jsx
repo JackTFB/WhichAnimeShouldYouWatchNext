@@ -8,7 +8,6 @@ export default function MainContent({ activeComponent }) {
         <div>
             {activeComponent === 'home' && <Home />}
             {activeComponent === 'search' && <Search />}
-            {activeComponent === 'test' && <Test />}
             {activeComponent === 'about' && <About />}
         </div>
       )

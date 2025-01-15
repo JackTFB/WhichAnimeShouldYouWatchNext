@@ -39,6 +39,7 @@ async function ShowBasedOnTagsQuery(tags) {
         query ($tag_in: [String]) {
           Page {
             media(tag_in: $tag_in) {
+              siteUrl
               title {
                 english
                 romaji
