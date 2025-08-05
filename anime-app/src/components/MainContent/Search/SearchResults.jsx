@@ -12,10 +12,14 @@ export default function SearchResults({ query }) {
             try {
                 const data = await TagQuery(query.id);
                 console.log(data);
-                var fetchedShows = data.data.Page.media.map(media => ({
+
+                var fetchedShows = data.recommendations.map(media => ({
+                    id: media.id,
                     siteUrl: media.siteUrl,
-                    title: media.title.english ? media.title.english : media.title.romaji,
-                    coverImage: media.coverImage.large ? media.coverImage.large : media.coverImage.medium
+                    title: media.title.english ? media.title.english: media.title.romaji,
+                    coverImage: media.coverImage.large ? media.coverImage.large: media.coverImage.medium,
+                    similarityScore: media.similarityScore,
+                    matchingTags: media.matchingTags
                 }));
                 setShows(fetchedShows);
             } catch (error) {
@@ -37,6 +41,7 @@ export default function SearchResults({ query }) {
                                 <img src={item.coverImage} alt={item.title}/>
                                 <p>{item.id}</p>
                                 <p>{item.title}</p>
+                                <p>Similarity: {item.similarityScore?.toFixed(1)}%</p>
                             </a>
                         </li>
                     ))}
