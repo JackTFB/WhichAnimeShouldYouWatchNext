@@ -29,6 +29,8 @@ export default function SearchResults({ query }) {
         fetchData();
     }, [query]);
 
+    
+
 
     return (
         <div>
@@ -36,10 +38,12 @@ export default function SearchResults({ query }) {
             <div className="test-grid">
                 <ul>
                     {shows.map((item, index) => (
-                        <li key={index}>
+                        <li key={index}
+                            className="fade-in"
+                            style={{ animationDelay: `${index * 120}ms` }}
+                        >
                             <a href={item.siteUrl} target="_blank">
                                 <img src={item.coverImage} alt={item.title}/>
-                                <p>{item.id}</p>
                                 <p>{item.title}</p>
                                 <p>Similarity: {item.similarityScore?.toFixed(1)}%</p>
                             </a>
